@@ -11,6 +11,9 @@ public class JamesFu extends Student implements SpecialInterestOrHobby
 {
     private String apMeme, jacobVoice;
 
+    // can be initialized by default as this number will likely not change, if need be change, setter methods can be used
+    private int numSiblings, numSisters, numBrothers;
+    
     /*
      * Constructor for the JamesFu class.
      * Constructors are special methods with the same exact name as the class name.  
@@ -33,6 +36,9 @@ public class JamesFu extends Student implements SpecialInterestOrHobby
         apMeme = "apmeme.jpg";
         jacobVoice = "sweatshirt.wav";
         setImage(imgFile);
+        setNumSiblings(1);
+        setNumSisters(1);
+        setNumBrothers(0);
     }
     /*
      * Default constructor, if you don't pass in a name and seating location
@@ -47,6 +53,9 @@ public class JamesFu extends Student implements SpecialInterestOrHobby
         apMeme = "apmeme.jpg";
         jacobVoice = "sweatshirt.wav";
         setImage(imgFile);
+        setNumSiblings(1);
+        setNumSisters(1);
+        setNumBrothers(0);
     }
     
      /**
@@ -62,11 +71,12 @@ public class JamesFu extends Student implements SpecialInterestOrHobby
             sayName(soundFile);
             
             myHobby("I like Jacob Sartorius and his music");
+            System.out.println("I have " + numSiblings " siblings," numSisters " sister"  , 
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             Greenfoot.delay(100);
-            jacobSing();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+            jacobSing();  // Special method to. Please write one of your own. You can use this, but please modify it and be creative.
           
         }
     } 
@@ -80,6 +90,34 @@ public class JamesFu extends Student implements SpecialInterestOrHobby
         System.out.println("My name is " + firstName + " " + lastName);
     }
     
+    /**
+     * Additional setter and getter methods
+     */
+
+    public int getNumSiblings() {
+        return numSiblings;
+    }
+    
+    public void setNumSiblings(int s) {
+        numSiblings = s;
+    }
+    
+    public int getNumSisters() {
+        return numSisters;
+    }
+    
+    public void setNumSisters(int s) {
+        numSisters = s;
+    }
+    
+    public int getNumBrothers() {
+        return numBrothers;
+    }
+    
+    public void setNumBrothers(int b) {
+        numBrothers = b;
+    }
+    
     public void jacobSing(){
         setImage(apMeme);
         Greenfoot.playSound(jacobVoice);
@@ -91,5 +129,5 @@ public class JamesFu extends Student implements SpecialInterestOrHobby
     public void myHobby(String s) {
          System.out.println(s);
     }
-
+    
 }
