@@ -7,9 +7,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 8/29/18
  */
 
-public class JamesFu extends Student implements SpecialInterestOrHobby, NumberOfSiblings
+public class JamesFu extends Student implements SpecialInterestOrHobby
 {
-    private String jacobPic, jacobVoice;
+    private String apMeme, jacobVoice;
 
     /*
      * Constructor for the JamesFu class.
@@ -30,7 +30,7 @@ public class JamesFu extends Student implements SpecialInterestOrHobby, NumberOf
         mySeat = s;
         imgFile = f.toLowerCase() + l.toLowerCase() + ".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
         soundFile = f.toLowerCase() + l.toLowerCase() + ".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
-        jacobPic = "jacob.jpg";
+        apMeme = "apmeme.jpg";
         jacobVoice = "sweatshirt.wav";
         setImage(imgFile);
     }
@@ -44,7 +44,7 @@ public class JamesFu extends Student implements SpecialInterestOrHobby, NumberOf
         mySeat = 2;
         imgFile = firstName.toLowerCase() + lastName.toLowerCase() + ".jpg";
         soundFile = firstName.toLowerCase() + lastName.toLowerCase() + ".wav";
-        jacobPic = "jacob.jpg";
+        apMeme = "apmeme.jpg";
         jacobVoice = "sweatshirt.wav";
         setImage(imgFile);
     }
@@ -75,18 +75,21 @@ public class JamesFu extends Student implements SpecialInterestOrHobby, NumberOf
     /**
      * Prints the first and last name to the console
      */
+    
     public void getName(){
         System.out.println("My name is " + firstName + " " + lastName);
     }
+    
     public void jacobSing(){
-        setImage(jacobPic);
+        setImage(apMeme);
         Greenfoot.playSound(jacobVoice);
         Greenfoot.delay(1300);
         setImage(imgFile);
         sitDown();
     }
-     public void myHobby(String s) {
+    
+    public void myHobby(String s) {
          System.out.println(s);
-}
+    }
 
 }
